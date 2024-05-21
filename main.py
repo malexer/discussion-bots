@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+
 from discussion_bots import config
 from discussion_bots.bot import Bot
 from discussion_bots.chat import OpenAiChat
@@ -22,4 +24,5 @@ def main():
 
 
 if __name__ == "__main__":
+    load_dotenv()
     main()
