@@ -11,6 +11,7 @@ class OpenAiChat:
     Note: variables OPENAI_API_KEY, OPENAI_ORG_ID, OPENAI_PROJECT_ID
     should be defined in your environment.
     """
+
     def __init__(self, model: str):
         self._model = model
         self._client = self._build_client()
@@ -45,8 +46,7 @@ class OpenAiChat:
     def ask(self, bot: Bot):
         bot_response = self._ask_chat_gpt(
             previous_messages=self._chat_history.serialize(
-                for_name=bot.name,
-                prompt=bot.prompt
+                for_name=bot.name, prompt=bot.prompt
             ),
         )
 
@@ -54,6 +54,5 @@ class OpenAiChat:
 
     def dump_messages(self) -> list[str]:
         return [
-            f"{reply.from_name}: {reply.content}"
-            for reply in self._chat_history.dump()
+            f"{reply.from_name}: {reply.content}" for reply in self._chat_history.dump()
         ]

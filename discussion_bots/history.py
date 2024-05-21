@@ -5,6 +5,7 @@ from pydantic import BaseModel
 
 class Message(BaseModel):
     role: str
+
     content: str
 
     @classmethod
@@ -65,7 +66,7 @@ class ChatHistory:
                     content=str(reply),
                 )
                 for reply in self._history
-            )
+            ),
         ]
 
         return [message.model_dump() for message in chat]

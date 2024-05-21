@@ -1,6 +1,7 @@
 from unittest.mock import Mock
-from mockito.matchers import captor
+
 import pytest
+from mockito.matchers import captor
 
 from discussion_bots.bot import Bot
 from discussion_bots.chat import OpenAiChat

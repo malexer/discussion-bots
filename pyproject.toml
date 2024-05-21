@@ -18,6 +18,9 @@ pydantic = "^2.7.1"
 [tool.poetry.group.test.dependencies]
 pytest = "^8.2.0"
 pytest-mockito = "^0.0.4"
+flake8 = "^7.0.0"
+flake8-black = "^0.3.6"
+flake8-isort = "^6.1.1"
 
 [build-system]
 requires = ["poetry-core"]

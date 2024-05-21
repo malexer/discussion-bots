@@ -1,8 +1,6 @@
 class Prompt:
 
-    INTRO = (
-        "You are in a meeting with a group of software engineers."
-    )
+    INTRO = "You are in a meeting with a group of software engineers."
 
     TASK = (
         "This group is discussing which language to choose for the "
